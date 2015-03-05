@@ -1,0 +1,32 @@
+name:          supervised-concurrency-pipes
+version:       0.0.0.0
+cabal-version: >= 1.10
+build-type:    Simple
+license:       BSD3
+License-file:  LICENSE
+copyright:     2015 Stanislav Chernichkin
+author:        Stanislav Chernichkin
+maintainer:    schernichkin@gmail.com
+homepage:      http://github.com/schernichkin/supervised-concurrency-pipes
+bug-reports:   http://github.com/schernichkin/supervised-concurrency-pipes/issues
+Category:      Concurrency
+synopsis:
+description:
+
+source-repository head
+  type: git
+  location: git://github.com/schernichkin/supervised-concurrency-pipes.git
+
+library
+  default-language: Haskell98
+  hs-source-dirs: src
+  exposed-modules:
+    Control.Concurrent.Supervised.Pipes
+
+  build-depends: base                   >= 4
+               , stm                    >= 2
+               , transformers           >= 0.2
+               , transformers-base      >= 0.4
+               , monad-control          >= 0.3 && < 1
+               , pipes-concurrency      >= 2
+               , supervised-concurrency >= 0
